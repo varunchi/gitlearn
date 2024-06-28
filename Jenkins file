@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('git clone') {
+            steps {
+               git branch: 'main', url: 'https://github.com/varunchi/gitlearn.git'
+            }
+        }
+        stage('maven') {
+            steps {
+               sh 'mvn clean package'
+               
+            }
+        }
+    }
+}
