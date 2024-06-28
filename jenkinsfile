@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('git clone') {
+        stage('test git clone') {
             steps {
                 git branch: 'main', url: 'https://github.com/varunchi/gitlearn.git'
             }
